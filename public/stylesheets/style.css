@@ -1,0 +1,11 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+#top-header
+{
+  background-color: #080808;
+}
+
+#top-header, a{
+  color: #fefff9;
+}

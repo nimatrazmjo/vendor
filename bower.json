@@ -1,0 +1,26 @@
+{
+  "name": "vendor",
+  "description": "Vendor Registration",
+  "main": "bin/www.js",
+  "authors": [
+    "Nimatullah Razmjo <nimatullah.razmjo@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "angular": "^1.5.3",
+    "bootstrap": "^3.3.6",
+    "angular-route": "^1.5.3",
+    "angular-resource": "^1.5.3"
+  }
+}

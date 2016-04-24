@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/bootstrap/dist/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/stylesheets/vendor.css")
+  body(ng-app="apps")
+    .container-fluid
+      .row
+        header.col-md-12.navbar-header#top-header
+          a.navbar-brand Vendor Registration
+
+        aside.col-md-2#left-side
+          nav
+            ul.nav
+              li
+                a(href="/") Home
+              li
+                a(href="/rfp-rfqs") RFP/RFQs
+              li
+                a(href="/settings") Settings
+
+              li
+                a(href="/logout") Logout
+        section.col-md-10
+          block content

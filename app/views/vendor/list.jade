@@ -1,0 +1,18 @@
+
+fieldset
+    legend All Vendors
+    table.table.table-responsive.table-striped
+        thead
+            tr
+                th #
+                th Company Nam
+                th User Name
+                th Registed Date
+                th Status
+                th Action
+        tbody(ng-repeat='n in test')
+            tr
+                td 1
+                td {{ n._id }}
+                td {{ n.username }}
+                td {{ n.expiry_date }}
