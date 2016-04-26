@@ -22,3 +22,6 @@ angular.module('apps').controller('addVendorCtrl', function($scope, $http) {
        }
    )*/
 });
+function date_converter(d){
+    return new Date(d).toUTCString();
+}

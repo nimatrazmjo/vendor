@@ -1,5 +1,12 @@
-var mongoose = require('mongoose');
+/**
+ * Model for Vendor Registeration
+ *
+ */
 
+
+
+var mongoose = require('mongoose'),
+    strtotime = require('strtotime');
 
 var VendorSchema = mongoose.Schema(
     {
@@ -9,7 +16,7 @@ var VendorSchema = mongoose.Schema(
         business_id : String,
         bank_name : String,
         account_number : String,
-        expiry_date : Date,
+        expiry_date : Number,
         other : String
     }
 );
@@ -17,10 +24,33 @@ var VendorSchema = mongoose.Schema(
 var VendorModel = mongoose.model('Vendor', VendorSchema);
 
 exports.add = function(req, res, next) {
-    VendorModel.create(req.body, function(err) {
+
+    var rec = records(req);
+    VendorModel.create(rec, function(err) {
         if(err) return next(err);
         res.redirect('/');
     });
 }
 
+/**
+ * table fields based on posted records
+ * @param req
+ * @returns {{}}
+ */
+var records = function(req) {
+    var record = {};
+    record.username = req.param('username');
+    record.password = req.param('password');
+    record.comp_name = req.param('comp_name');
+    record.business_id = req.param('business_id');
+    record.bank_name = req.param('bank_name');
+    record.account_number = req.param('account_number');
+    record.expiry_date = strtotime(req.param('expiry_date'));
+    record.other = req.param('other');
+    return record;
+}
+
+var dateConverter = function(date) {
+
+}
 //exports.list =

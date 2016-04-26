@@ -17,6 +17,7 @@
     "morgan": "~1.6.1",
     "pug": "^0.1.0",
     "serve-favicon": "~2.3.0",
+    "strtotime": "^1.0.0",
     "stylus": "^0.54.2"
   },
   "description": "This README would normally document whatever steps are necessary to get your application up and running.",
