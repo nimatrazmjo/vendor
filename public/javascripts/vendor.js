@@ -14,9 +14,9 @@ angular.module('apps').config(function($routeProvider, $locationProvider){
         templateUrl : 'vendor/add',
         controller : 'mvLogoutCtrl'
     });
-    $routeProvider.when('/add-vendor', {
+    $routeProvider.when('/addvendor', {
         templateUrl : 'vendor/add',
-        controller : 'mvLogoutCtrl'
+        controller : 'mvAddVend'
     });
 });
 

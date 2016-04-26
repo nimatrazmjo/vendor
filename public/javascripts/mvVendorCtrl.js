@@ -10,3 +10,15 @@ angular.module('apps').controller('vendorListCtrl',function($scope, $http){
        }
    );
 });
+
+angular.module('apps').controller('addVendorCtrl', function($scope, $http) {
+
+    /*$http.get('/add/vendor').then(
+       function successCallBack(response) {
+           $scope.test = response.data;
+       },
+       function errorCallBack(response) {
+           alert('Failed '+response);
+       }
+   )*/
+});

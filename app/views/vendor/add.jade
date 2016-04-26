@@ -27,10 +27,15 @@ fieldset
 
         .form-group
             label.control-label(for="expiry_date") Business Expiry Date
-            input.form-control(name="expiry_date")
+            input.form-control(name="expiry_date", id="expiry_date")
 
         .form-group
             label.control-label(for="other") Other Information
             textarea.form-control(name="other", cols="2", rows="8")
         button.btn.btn-primary.pull-right(type="submit") Save
 
+    script(type="text/javascript", src="/jquery-ui/jquery-ui.min.js")
+    script(type="text/javascript").
+        $(function(){
+            $("#expiry_date").datepicker()
+        })

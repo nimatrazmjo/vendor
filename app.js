@@ -35,7 +35,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 //---------- COnnect to MongoDB
 app.get('/vendor/:partialsPath', function(req, res) {
-  console.log(req.params.partialsPath);
+
   res.render('vendor/'+req.params.partialsPath);
 });
 
