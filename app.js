@@ -1,3 +1,10 @@
+/**
+ * Vendor regiseration
+ *
+ * @author : Nimatullah Razmjo < nimatullah.razmjo@gmail.com >
+ * @version : 1.0.1
+ */
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');

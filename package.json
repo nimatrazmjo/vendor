@@ -18,5 +18,15 @@
     "pug": "^0.1.0",
     "serve-favicon": "~2.3.0",
     "stylus": "^0.54.2"
-  }
+  },
+  "description": "This README would normally document whatever steps are necessary to get your application up and running.",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/nimatullah_razmjo/vendor.git"
+  },
+  "author": "Nimatullah Razmjo < nimatullah.razmjo@gmail.com>",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/nimatullah_razmjo/vendor#readme"
 }
