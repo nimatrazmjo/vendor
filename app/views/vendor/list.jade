@@ -1,5 +1,6 @@
 
 fieldset
+    a.btn-primary.btn(href="/addvendor") Add New Vendor
     legend All Vendors
     table.table.table-responsive.table-striped
         thead
@@ -18,5 +19,5 @@ fieldset
                 td {{ date_converter(n.expiry_date) }}
                 td  Active
                 td
-                    a(href="/edit/", class="btn btn-default") Edit
-                    a(href="/view/", class="btn btn-default") View
+                    a(href="#", class="btn btn-default", ng-click="edit({{n._id}})") Edit
+                    a(href="#", class="btn btn-default") View
