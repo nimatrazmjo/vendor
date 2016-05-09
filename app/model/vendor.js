@@ -23,6 +23,7 @@ var VendorSchema = mongoose.Schema(
 
 var VendorModel = mongoose.model('Vendor', VendorSchema);
 
+/** Add function **/
 exports.add = function(req, res, next) {
 
     var rec = records(req);
@@ -45,12 +46,7 @@ var records = function(req) {
     record.business_id = req.param('business_id');
     record.bank_name = req.param('bank_name');
     record.account_number = req.param('account_number');
-    record.expiry_date = strtotime(req.param('expiry_date'));
+    record.expiry_date = new Date(req.param('expiry_date')).getTime();
     record.other = req.param('other');
     return record;
 }
-
-var dateConverter = function(date) {
-
-}
-//exports.list =

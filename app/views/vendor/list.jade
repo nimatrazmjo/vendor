@@ -16,7 +16,7 @@ fieldset
                 td
                 td {{ n.comp_name }}
                 td {{ n.username }}
-                td {{ date_converter(n.expiry_date) }}
+                td {{n.expiry_date | date }}
                 td  Active
                 td
                     a(href="#", class="btn btn-default", ng-click="edit({{n._id}})") Edit

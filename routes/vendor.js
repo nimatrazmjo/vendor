@@ -11,9 +11,6 @@ module.exports = function(app) {
         VendorModel.find({}).exec(function(err, data) {
             if(err) return next(err);
             if(!data) return next();
-
-            console.log(data);
-
             res.send(data);
         });
     });
