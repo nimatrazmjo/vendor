@@ -6,17 +6,17 @@
 
 
 var mongoose = require('mongoose'),
-    strtotime = require('strtotime');
+       validator = require('express-validator');
 
 var VendorSchema = mongoose.Schema(
     {
-        username : String,
-        password : String,
-        comp_name : String,
-        business_id : String,
-        bank_name : String,
-        account_number : String,
-        expiry_date : Number,
+        username : { type: String, required:[true, 'Username is required']},
+        password : { type: String, require:[true, 'Password is required']},
+        comp_name : { type: String, require:[true, 'Company name is required']},
+        business_id : { type: String, require:[true, 'Business ID is required']},
+        bank_name : { type: String, require:[true, 'Bank Name is required']},
+        account_number : { type: String, require:[true, 'Account number is required']},
+        expiry_date : { type: Number, require:[true, 'Expire date is required']},
         other : String
     }
 );
@@ -49,4 +49,10 @@ var records = function(req) {
     record.expiry_date = new Date(req.param('expiry_date')).getTime();
     record.other = req.param('other');
     return record;
+}
+
+/** Form validation **/
+var validator = function (req) {
+    var status = {};
+
 }
