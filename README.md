@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README #
 
 This README would normally document whatever steps are necessary to get your application up and running.
@@ -27,3 +28,6 @@ This README would normally document whatever steps are necessary to get your app
 
 * Nimatullah Razmjo < nimatullah.razmjo@gmail.com>
 * Mobile <+93 787 21 30 64 >
+=======
+# vendor
+>>>>>>> dec39d253503769b2082f35e0bbcd06a09aaeb93
