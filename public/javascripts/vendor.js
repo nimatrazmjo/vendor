@@ -18,7 +18,7 @@ angular.module('apps').config(function($routeProvider, $locationProvider){
         templateUrl : 'vendor/add',
         controller : 'mvAddVend'
     });
-    $routeProvider.when('/edit/:_id', {
+    $routeProvider.when('/edit', {
         templateUrl : 'vendor/edit' ,
         controller : 'mvEditUrl'
     });
@@ -29,22 +29,22 @@ angular.module('apps').controller('mvVendorCtrl', function($scope) {
 });
 
 angular.module('apps').controller('mvLogoutCtrl', function($scope) {
-    console.log('I am in logout Controller')
+
    $scope.logout ="Log out page"
 });
 
-/*
-angular.module('apps').controller('vendorListCtrl', function($scope, $http) {
-    console.log('I am in scope');
-    $http.get('/vendor/list').then(
-        function successCallBack(response) {
-            $scope.list=  response.data;
+
+angular.module('apps').controller('mvEditUrl', function($scope, $http) {
+    $http.get('/vendor_records').then(
+        function successCallback(response) {
+            console.log(response.data);
+            $scope.records = response.data;
         },
-        function errorCallBack(response) {
-            alert('Faild 404');
+
+        function errorCallback(response) {
+            alert('Failed'+response);
         }
-    );
+    )
 });
-*/
 
 
