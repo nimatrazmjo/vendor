@@ -14,13 +14,5 @@ module.exports = function(app) {
             res.send(data);
         });
     });
-
-    app.get('/vendor_records', function(req, res, next){
-        VendorModel.find({_id:"573014fa9ade390e02afcd48"}).exec(function (err, data) {
-           if(err) return next(err);
-
-            if(!data) return next();
-            res.send(data);
-        });
-    });
+    app.get('/edit/:id', vendor.getRecords);
 }

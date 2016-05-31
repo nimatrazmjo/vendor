@@ -56,3 +56,14 @@ var validator = function (req) {
     var status = {};
 
 }
+
+exports.getRecords = function(req, res, next) {
+    var id = req.param('id');
+    VendorModel.findById(id).exec(function(err, data) {
+        if(err || !data) {
+            return next(err);
+        }
+       res.render('vendor/edit',{ rec:data});
+
+    });
+}

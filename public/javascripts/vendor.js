@@ -18,10 +18,6 @@ angular.module('apps').config(function($routeProvider, $locationProvider){
         templateUrl : 'vendor/add',
         controller : 'mvAddVend'
     });
-    $routeProvider.when('/edit', {
-        templateUrl : 'vendor/edit' ,
-        controller : 'mvEditUrl'
-    });
 });
 
 angular.module('apps').controller('mvVendorCtrl', function($scope) {

@@ -54,12 +54,9 @@ con.once('open', function callback() {
 });
 
 //------- routing
+require('./routes/users')(app);
 require('./routes/vendor')(app);
 require('./routes/index')(app);
-require('./routes/users')(app);
-
-//app.use('/', routes);
-//app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

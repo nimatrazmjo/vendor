@@ -9,7 +9,7 @@ li > a {
 #left-side {
   background-color: #081d28;
   color: #e6e6fa;
-  height: 100% !important;
+  height: 100vh !important;
 }
 section {
   padding-right: 20px !important;
