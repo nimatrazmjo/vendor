@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "angular-resource": "^1.5.3",
@@ -19,7 +21,8 @@
     "pug": "^0.1.0",
     "serve-favicon": "~2.3.0",
     "strtotime": "^1.0.0",
-    "stylus": "^0.54.2"
+    "stylus": "^0.54.2",
+    "snyk": "^1.68.0"
   },
   "description": "This README would normally document whatever steps are necessary to get your application up and running.",
   "main": "app.js",
@@ -30,5 +33,6 @@
   },
   "author": "Nimatullah Razmjo < nimatullah.razmjo@gmail.com>",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/nimatullah_razmjo/vendor#readme"
+  "homepage": "https://bitbucket.org/nimatullah_razmjo/vendor#readme",
+  "snyk": true
 }
